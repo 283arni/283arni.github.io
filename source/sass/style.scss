@@ -1,3 +1,8 @@
-h1 {
-  color: red;
-}
+//settings
+@import "./settings/normalize";
+@import "./settings/variables";
+@import "./settings/media";
+@import "./settings/layout";
+
+//blocks
+@import "./blocks/hero";

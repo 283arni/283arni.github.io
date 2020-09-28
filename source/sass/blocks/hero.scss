@@ -1,0 +1,12 @@
+.hero h1 {
+  font-size: 60px;
+  color: red;
+
+  @include tablets {
+    font-size: 40px;
+  }
+
+  @include phones {
+    font-size: 20px;
+  }
+}
