@@ -12,6 +12,15 @@ html {
 
 a {
   text-decoration: none;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    filter: blur(1px);
+  }
 }
 
 img {
@@ -21,4 +30,12 @@ img {
 .container {
   margin: 0 auto;
   max-width: 1160px;
+
+  @include tablets {
+    max-width: 678px;
+  }
+
+  @include phones {
+    max-width: 290px;
+  }
 }
