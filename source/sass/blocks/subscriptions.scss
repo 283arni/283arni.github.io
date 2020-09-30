@@ -1,0 +1,244 @@
+.subscriptions {
+  position: relative;
+  background-color: $background-sub;
+  text-align: center;
+  padding: 116px 0;
+
+  @include tablets {
+    padding-bottom: 65px;
+  }
+
+  @include phones {
+    padding-top: 68px;
+    padding-bottom: 42px;
+  }
+
+  &::after {
+    display: block;
+    position: absolute;
+    top: 560px;
+    right: 0;
+    content: "";
+    width: 321px;
+    height: 384px;
+    background: center/cover no-repeat url("../img/weight.png");
+
+    @include tablets {
+      top: 1520px;
+      background-image: url("../img/weight-tablet.png");
+    }
+
+    @include phones {
+      display: none;
+    }
+  }
+
+  h1 {
+    font-family: $bebas;
+    font-size: 49px;
+    margin-top: 0;
+    margin-bottom: 34px;
+    letter-spacing: 0.09rem;
+
+    @include tablets {
+      font-size: 42px;
+      margin-bottom: 30px;
+    }
+
+    @include phones {
+      font-size: 32px;
+      margin-bottom: 23px;
+    }
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.subscriptions__list-buttons {
+  margin-bottom: 40px;
+
+  @include tablets {
+    margin-bottom: 45px;
+  }
+
+  @include phones {
+    margin-bottom: 34px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    cursor: pointer;
+    background-color: transparent;
+    color: rgba($dark-blue, 0.5);
+    font-size: 20px;
+    border: 0;
+    border-bottom: 2px solid rgba($gray, 0.2);
+    padding: 0;
+    padding-bottom: 15px;
+
+    @include tablets {
+      font-size: 18px;
+    }
+
+    @include phones {
+      font-size: 16px;
+    }
+
+    &:hover {
+      color: $dark-blue;
+      border-color: $dark-red;
+    }
+  }
+
+  li:nth-child(even) button {
+    padding-right: 45px;
+    padding-left: 45px;
+
+    @include tablets {
+      padding-right: 54px;
+      padding-left: 54px;
+    }
+
+    @include phones {
+      padding-right: 45px;
+      padding-left: 45px;
+    }
+  }
+}
+
+.subscriptions__items {
+  position: relative;
+  z-index: 10;
+
+  ul {
+    justify-content: space-between;
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 31%;
+    border: 7px solid;
+    border-color: $white;
+    min-height: 448px;
+    background-color: $white;
+
+    @include tablets {
+      width: 65%;
+      margin-bottom: 39px;
+    }
+
+    @include phones {
+      width: 100%;
+      min-height: 378px;
+    }
+
+    &:hover {
+      border-image: linear-gradient(148.82deg, $dark-red 0.85%, $dark-blue 100%) 7;
+
+      a {
+        color: $white;
+        box-shadow: none;
+        background: linear-gradient(97.05deg, $dark-red 0%, $dark-blue 95.31%);
+      }
+    }
+  }
+}
+
+.subscriptions__description {
+  text-align: center;
+
+  h4 {
+    font-weight: bold;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    @include phones {
+      font-size: 22px;
+    }
+  }
+
+  div:first-of-type {
+    color: $font-discription;
+    margin-bottom: 50px;
+
+    @include phones {
+      margin-bottom: 45px;
+    }
+  }
+
+  a {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $font-main;
+    font-size: 12px;
+    padding: 27px 50px;
+    border: none;
+    box-shadow: inset 2px 2px 0 $font-main, inset -2px -2px 0 $font-main;
+  }
+}
+
+.subscriptions__price {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 80px;
+  margin-bottom: 60px;
+
+  @include phones {
+    min-height: 60px;
+  }
+
+  span:first-of-type {
+    position: absolute;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 70%;
+    top: 0;
+    color: rgba($light-gray, 0.5);
+
+    @include phones {
+      font-size: 80px;
+    }
+  }
+
+  span:last-of-type {
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 70%;
+    color: $blue;
+    z-index: 20;
+    margin-right: 14px;
+
+    @include phones {
+      font-size: 48px;
+    }
+  }
+
+  svg {
+    z-index: 20;
+
+    @include phones {
+      width: 24px;
+      height: 33px;
+    }
+  }
+}
