@@ -93,9 +93,10 @@
       font-size: 16px;
     }
 
-    &:hover {
+    &.active {
       color: $dark-blue;
       border-color: $dark-red;
+      outline: none;
     }
   }
 

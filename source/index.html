@@ -97,9 +97,9 @@
       <h1>Абонементы</h1>
       <div class="subscriptions__list-buttons">
         <ul>
-          <li><button type="button">1 месяц</button></li>
-          <li><button type="button">6 месяцев</button></li>
-          <li><button type="button">12 месяцев</button></li>
+          <li><button type="button" data-value="1">1 месяц</button></li>
+          <li><button type="button" data-value="6">6 месяцев</button></li>
+          <li><button type="button" data-value="12">12 месяцев</button></li>
         </ul>
       </div>
       <div class="subscriptions__items">
@@ -107,10 +107,10 @@
           <li>
             <div class="subscriptions__description">
               <h4>С тренером</h4>
-              <div>12 занятий</div>
+              <div id="lessons">12 занятий</div>
               <div class="subscriptions__price">
-                <span>5000</span>
-                <span>5000</span>
+                <span data-value="5000">5000</span>
+                <span data-value="5000">5000</span>
                 <svg width="30px" height="42px">
                   <use xlink:href="img/sprite_auto.svg#money"></use>
                 </svg>
@@ -123,8 +123,8 @@
               <h4>Дневной</h4>
               <div>с 8:00 до 17:00 </div>
               <div class="subscriptions__price">
-                <span>1700</span>
-                <span>1700</span>
+                <span data-value="1700">1700</span>
+                <span data-value="1700">1700</span>
                 <svg width="30px" height="42px">
                   <use xlink:href="img/sprite_auto.svg#money"></use>
                 </svg>
@@ -137,8 +137,8 @@
               <h4>Полный день</h4>
               <div>с 8:00 до 22:00 </div>
               <div class="subscriptions__price">
-                <span>2700</span>
-                <span>2700</span>
+                <span data-value="2700">2700</span>
+                <span data-value="2700">2700</span>
                 <svg width="30px" height="42px">
                   <use xlink:href="img/sprite_auto.svg#money"></use>
                 </svg>
@@ -153,5 +153,6 @@
   <section style="background-color: blue; height: 200px;">
 
   </section>
+  <script src="js/script.js"></script>
 </body>
 </html>
