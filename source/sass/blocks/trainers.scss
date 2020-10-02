@@ -1,0 +1,56 @@
+.trainers__slider {
+  display: flex;
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+button:last-of-type[type="button"] {
+  svg {
+    transform: rotate(180deg);
+  }
+}
+
+.trainers__slider-wrapper {
+  > ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.trainers__item {
+  position: relative;
+
+  &:hover .trainers__info {
+    background-color: transparent;
+    justify-content: flex-end;
+  }
+
+  &:hover span,
+  &:hover ul {
+    display: none;
+  }
+}
+
+.trainers__info {
+  position: absolute;
+  top: 0;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  background-color: rgba($font-main, 0.9);
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  ul {
+    margin: 0;
+  }
+}
