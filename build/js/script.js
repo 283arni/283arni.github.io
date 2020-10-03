@@ -7,7 +7,7 @@
   var lessons = document.querySelector('#lessons');
   var lessonsValue = parseInt(lessons.textContent, 10);
 
-  function cleareActive() {
+  function cleanClassActive() {
     buttons.forEach(function (button) {
       button.classList.remove('active');
     });
@@ -16,8 +16,7 @@
   function changePrices(money, amountMoths) {
     money.forEach(function (price) {
       var priceValue = +price.dataset.value;
-      var newPrice = priceValue * amountMoths;
-      price.textContent = newPrice;
+      price.textContent = priceValue * amountMoths;
     });
   }
 
@@ -25,7 +24,7 @@
     var buttonValue = +button.dataset.value;
 
     button.addEventListener('click', function () {
-      cleareActive();
+      cleanClassActive();
 
       button.classList.add('active');
 
@@ -34,4 +33,67 @@
       changePrices(prices, buttonValue);
     });
   });
+})();
+
+(function () {
+
+  var Numbers = {
+    START: 0,
+    СORRECTER: 1,
+    DEVIDE: 100
+  };
+
+  var Controls = {
+    PREV: 'prev',
+    NEXT: 'next'
+  };
+
+  var slider = document.querySelector('.slider');
+
+  function createSlider(selector) {
+    var items = selector.querySelectorAll('.slider__wrapper>ul>li');
+    var item = items[0];
+    var sliderWrapper = selector.querySelector('.slider__wrapper ul');
+    var btnLeft = selector.querySelector('button:first-of-type');
+    var btnRight = selector.querySelector('button:last-of-type');
+    var currentItem = Numbers.START;
+    var steps = (parseInt(getComputedStyle(item).minWidth, 10) * items.length) / Numbers.DEVIDE;
+
+    btnLeft.addEventListener('click', function (e) {
+      e.preventDefault();
+      sliderGo(Controls.PREV);
+    });
+
+    btnRight.addEventListener('click', function (e) {
+      e.preventDefault();
+      sliderGo(Controls.NEXT);
+    });
+
+
+    function sliderGo(way) {
+      if (way === Controls.NEXT) {
+        currentItem++;
+      }
+
+      if (way === Controls.PREV) {
+        currentItem--;
+      }
+
+      if (currentItem === steps) {
+        currentItem = Numbers.START;
+      }
+
+      if (currentItem < Numbers.START) {
+        currentItem = steps - Numbers.СORRECTER;
+      }
+
+      translate();
+    }
+
+    function translate() {
+      sliderWrapper.style.transform = 'translateX(-' + currentItem + '00%)';
+    }
+  }
+
+  createSlider(slider);
 })();

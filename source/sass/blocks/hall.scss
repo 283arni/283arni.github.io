@@ -52,8 +52,7 @@
     font-size: 49px;
     font-family: $bebas;
     text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 8px;
+    margin: 0 0 8px 0;
     letter-spacing: 0.09rem;
 
     @include tablets {
@@ -65,11 +64,10 @@
     }
   }
 
-  h4 {
+  h3 {
     font-size: 18px;
     font-weight: 400;
-    margin-top: 0;
-    margin-bottom: 42px;
+    margin: 0 0 42px 0;
 
     @include phones {
       margin-bottom: 30px;
@@ -77,8 +75,7 @@
   }
 
   p {
-    margin-top: 0;
-    margin-bottom: 8px;
+    margin: 0 0 8px 0;
     font-weight: 300;
     line-height: 150%;
 
@@ -169,10 +166,10 @@
   bottom: 4px;
   left: 0;
   right: 0;
-  background-color: rgba(20, 54, 122, 0.5);
+  background: rgba($font-main, 0.5);
 
   button {
-    background-color: transparent;
+    background: transparent;
     border-color: transparent;
     outline: none;
     cursor: pointer;

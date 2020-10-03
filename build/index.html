@@ -11,14 +11,14 @@
 <body>
   <section class="hero">
     <div class="container">
-      <header class="header">
+      <div class="hero__header">
         <a>
           <svg width="89" height="20">
             <use xlink:href="img/sprite_auto.svg#supergym"></use>
           </svg>
         </a>
         <a href="tel:+78005555555">8-800-555-55-55</a>
-      </header>
+      </div>
       <div class="hero__main">
         <div class="hero__welcome">
           <h3>омск</h3>
@@ -36,7 +36,7 @@
           <picture>
             <source media="(max-width: 1199px)" srcset="img/hero-man-tablet.webp 1x, img/hero-man-tablet@2x.webp 2x" type="image/webp">
             <source media="(min-width: 1200px)" srcset="img/hero-man.webp 1x, img/hero-man@2x.webp 2x" type="image/webp">
-            <img src="img/hero-man.jpg" width="500" height="556" alt="Супергерой">
+            <img src="img/hero-man.jpg" srcset="img/hero-man@2x.jpg" width="500" height="556" alt="Супергерой">
           </picture>
         </div>
         <div class="hero__socials">
@@ -60,7 +60,7 @@
       <div class="hall__info">
         <div class="hall__info-wrapper">
           <h2>Тренажерный зал</h2>
-          <h4>Просторный зал площадью 900 кв/м</h4>
+          <h3>Просторный зал площадью 900 кв/м</h3>
           <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
           <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
         </div>
@@ -94,7 +94,7 @@
   </section>
   <section class="subscriptions" id="subscriptions">
     <div class="container">
-      <h1>Абонементы</h1>
+      <h2>Абонементы</h2>
       <div class="subscriptions__list-buttons">
         <ul>
           <li><button type="button" data-value="1">1 месяц</button></li>
@@ -106,7 +106,7 @@
         <ul>
           <li>
             <div class="subscriptions__description">
-              <h4>С тренером</h4>
+              <h3>С тренером</h3>
               <div id="lessons">12 занятий</div>
               <div class="subscriptions__price">
                 <span data-value="5000">5000</span>
@@ -120,7 +120,7 @@
           </li>
           <li>
             <div class="subscriptions__description">
-              <h4>Дневной</h4>
+              <h3>Дневной</h3>
               <div>с 8:00 до 17:00 </div>
               <div class="subscriptions__price">
                 <span data-value="1700">1700</span>
@@ -134,7 +134,7 @@
           </li>
           <li>
             <div class="subscriptions__description">
-              <h4>Полный день</h4>
+              <h3>Полный день</h3>
               <div>с 8:00 до 22:00 </div>
               <div class="subscriptions__price">
                 <span data-value="2700">2700</span>
@@ -184,92 +184,161 @@
     </div>
   </section>
   <section class="trainers">
-    <h2>Тренеры</h2>
-    <div class="trainers__slider">
-      <button type="button">
-        <svg width="16" height="32">
-          <use xlink:href="img/sprite_auto.svg#arrow"></use>
-        </svg>
-      </button>
-      <div class="trainers__slider-wrapper container">
-        <ul>
-          <li>
-            <div class="trainers__item">
-              <picture>
-                <source srcset="img/trainer-1.webp 1x, img/trainer-1@2x.webp 2x" type="image/webp">
-                <img src="img/trainer-1.jpg" srcset="img/trainer-1@2x.jpg 2x" width="260" height="294" alt="Тренер">
-              </picture>
-              <div class="trainers__info">
-                <h5>Анна Павлова</h5>
-                <span>CrossFit</span>
-                <ul>
-                  <li>Certified Level 3 Trainer</li>
-                  <li>Победитель чемпионата России по CrossFit</li>
-                  <li>Опыт — 6 лет</li>
-                </ul>
+    <div class="container">
+      <h2>Тренеры</h2>
+      <div class="slider">
+        <button type="button">
+          <svg width="16" height="32">
+            <use xlink:href="img/sprite_auto.svg#arrow"></use>
+          </svg>
+        </button>
+        <div class="slider__wrapper">
+          <ul>
+            <li>
+              <div class="slider__item">
+                <picture>
+                  <source srcset="img/trainer-1.webp 1x, img/trainer-1@2x.webp 2x" type="image/webp">
+                  <img src="img/trainer-1.jpg" srcset="img/trainer-1@2x.jpg 2x" width="260" height="294" alt="Тренер">
+                </picture>
+                <div class="slider__info">
+                  <h3>Анна Павлова</h3>
+                  <h4>CrossFit</h4>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="trainers__item">
-              <picture>
-                <source srcset="img/trainer-1.webp 1x, img/trainer-1@2x.webp 2x" type="image/webp">
-                <img src="img/trainer-1.jpg" srcset="img/trainer-1@2x.jpg 2x" width="260" height="294" alt="Тренер">
-              </picture>
-              <div class="trainers__info">
-                <h5>Анна Павлова</h5>
-                <span>CrossFit</span>
-                <ul>
-                  <li>Certified Level 3 Trainer</li>
-                  <li>Победитель чемпионата России по CrossFit</li>
-                  <li>Опыт — 6 лет</li>
-                </ul>
+            </li>
+            <li>
+              <div class="slider__item">
+                <picture>
+                  <source srcset="img/trainer-2.webp 1x, img/trainer-2@2x.webp 2x" type="image/webp">
+                  <img src="img/trainer-2.jpg" srcset="img/trainer-2@2x.jpg 2x" width="260" height="294" alt="Тренер">
+                </picture>
+                <div class="slider__info">
+                  <h3>Алексей Лавров</h3>
+                  <h4>CrossFit</h4>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="trainers__item">
-              <picture>
-                <source srcset="img/trainer-1.webp 1x, img/trainer-1@2x.webp 2x" type="image/webp">
-                <img src="img/trainer-1.jpg" srcset="img/trainer-1@2x.jpg 2x" width="260" height="294" alt="Тренер">
-              </picture>
-              <div class="trainers__info">
-                <h5>Анна Павлова</h5>
-                <span>CrossFit</span>
-                <ul>
-                  <li>Certified Level 3 Trainer</li>
-                  <li>Победитель чемпионата России по CrossFit</li>
-                  <li>Опыт — 6 лет</li>
-                </ul>
+            </li>
+            <li>
+              <div class="slider__item">
+                <picture>
+                  <source srcset="img/trainer-3.webp 1x, img/trainer-3@2x.webp 2x" type="image/webp">
+                  <img src="img/trainer-3.jpg" srcset="img/trainer-3@2x.jpg 2x" width="260" height="294" alt="Тренер">
+                </picture>
+                <div class="slider__info">
+                  <h3>Александр Пашков</h3>
+                  <h4>CrossFit</h4>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="trainers__item">
-              <picture>
-                <source srcset="img/trainer-1.webp 1x, img/trainer-1@2x.webp 2x" type="image/webp">
-                <img src="img/trainer-1.jpg" srcset="img/trainer-1@2x.jpg 2x" width="260" height="294" alt="Тренер">
-              </picture>
-              <div class="trainers__info">
-                <h5>Анна Павлова</h5>
-                <span>CrossFit</span>
-                <ul>
-                  <li>Certified Level 3 Trainer</li>
-                  <li>Победитель чемпионата России по CrossFit</li>
-                  <li>Опыт — 6 лет</li>
-                </ul>
+            </li>
+            <li>
+              <div class="slider__item">
+                <picture>
+                  <source srcset="img/trainer-4.webp 1x, img/trainer-4@2x.webp 2x" type="image/webp">
+                  <img src="img/trainer-4.jpg" srcset="img/trainer-4@2x.jpg 2x" width="260" height="294" alt="Тренер">
+                </picture>
+                <div class="slider__info">
+                  <h3>Мария Кетова</h3>
+                  <h4>CrossFit</h4>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+            <li>
+              <div class="slider__item">
+                <picture>
+                  <source srcset="img/trainer-1.webp 1x, img/trainer-1@2x.webp 2x" type="image/webp">
+                  <img src="img/trainer-1.jpg" srcset="img/trainer-1@2x.jpg 2x" width="260" height="294" alt="Тренер">
+                </picture>
+                <div class="slider__info">
+                  <h3>Анна Павлова</h3>
+                  <h4>CrossFit</h4>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="slider__item">
+                <picture>
+                  <source srcset="img/trainer-2.webp 1x, img/trainer-2@2x.webp 2x" type="image/webp">
+                  <img src="img/trainer-2.jpg" srcset="img/trainer-2@2x.jpg 2x" width="260" height="294" alt="Тренер">
+                </picture>
+                <div class="slider__info">
+                  <h3>Алексей Лавров</h3>
+                  <h4>CrossFit</h4>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="slider__item">
+                <picture>
+                  <source srcset="img/trainer-3.webp 1x, img/trainer-3@2x.webp 2x" type="image/webp">
+                  <img src="img/trainer-3.jpg" srcset="img/trainer-3@2x.jpg 2x" width="260" height="294" alt="Тренер">
+                </picture>
+                <div class="slider__info">
+                  <h3>Александр Пашков</h3>
+                  <h4>CrossFit</h4>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="slider__item">
+                <picture>
+                  <source srcset="img/trainer-4.webp 1x, img/trainer-4@2x.webp 2x" type="image/webp">
+                  <img src="img/trainer-4.jpg" srcset="img/trainer-4@2x.jpg 2x" width="260" height="294" alt="Тренер">
+                </picture>
+                <div class="slider__info">
+                  <h3>Мария Кетова</h3>
+                  <h4>CrossFit</h4>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button type="button">
+          <svg width="16" height="32">
+            <use xlink:href="img/sprite_auto.svg#arrow"></use>
+          </svg>
+        </button>
       </div>
-      <button type="button">
-        <svg width="16" height="32">
-          <use xlink:href="img/sprite_auto.svg#arrow"></use>
-        </svg>
-      </button>
     </div>
-
   </section>
   <section style="height: 100px; background-color: blue;"></section>
   <script src="js/script.js"></script>
