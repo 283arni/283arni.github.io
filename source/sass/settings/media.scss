@@ -1,3 +1,9 @@
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
 @mixin tablets {
   @media screen and (max-width: $tablets) {
     @content;

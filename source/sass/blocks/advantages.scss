@@ -1,0 +1,242 @@
+.advantages {
+  background: $background-sub;
+  padding: 115px 0 120px 0;
+
+  @include tablets {
+    padding: 95px 0 100px 0;
+  }
+
+  @include phones {
+    position: relative;
+    padding: 67px 0 26px 0;
+  }
+
+  .container {
+    @include desktop {
+      max-width: 1040px;
+    }
+  }
+
+  h2 {
+    font-size: 49px;
+    letter-spacing: 0.09rem;
+    font-family: $bebas;
+    text-align: center;
+    margin: 0 0 65px 0;
+
+    @include tablets {
+      font-size: 42px;
+      margin-bottom: 45px;
+    }
+
+    @include phones {
+      font-size: 32px;
+    }
+  }
+}
+
+.advantages__wrapper {
+  position: relative;
+  height: 308px;
+
+  @include tablets {
+    height: auto;
+  }
+
+  @include phones {
+    position: static;
+  }
+}
+
+.advantages__description {
+  display: flex;
+  justify-content: space-between;
+  min-height: 50%;
+
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  &:first-of-type {
+    border-bottom: 1px solid rgba($bb-color, 0.2);
+
+    @include tablets {
+      border: transparent;
+    }
+
+    @include phones {
+      margin-bottom: 290px;
+    }
+
+    .advantages__item {
+      display: flex;
+      align-items: flex-start;
+
+      @include phones {
+        align-items: center;
+      }
+    }
+  }
+}
+
+.advantages__main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: $background-sub;
+  color: $white;
+  text-align: center;
+  padding: 0 60px;
+  width: 35%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+
+  @include tablets {
+    position: static;
+    width: auto;
+    height: auto;
+    transform: none;
+    padding: 45px 120px;
+  }
+
+  @include phones {
+    position: absolute;
+    top: 43.5%;
+    right: 0;
+    left: 0;
+    padding: 0;
+  }
+
+  .advantages__main-wrapper {
+    background: $advanteges-blue;
+    min-height: 100%;
+    padding: 58px 30px;
+
+    @include tablets {
+      padding: 35px 130px;
+      width: 100%;
+    }
+
+    @include phones {
+      padding: 43px 65px;
+    }
+  }
+
+  span {
+    font-weight: bold;
+    font-size: 74px;
+    line-height: 70px;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 26px;
+    margin: 10px 0 35px 0;
+
+    @include tablets {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    @include phones {
+      margin-top: 0;
+    }
+  }
+
+  p {
+    margin: 0;
+    line-height: 150%;
+  }
+}
+
+
+.advantages__item {
+  display: flex;
+  align-items: flex-end;
+  width: 32%;
+
+  @include tablets {
+    width: 48%;
+  }
+
+  @include phones {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 38px;
+  }
+
+  &:first-of-type {
+    margin-left: 25px;
+
+    @include tablets {
+      margin-left: 0;
+    }
+  }
+
+  &:last-of-type {
+    margin-right: 5px;
+
+    @include tablets {
+      margin-right: 0;
+    }
+  }
+}
+
+.advantages__amount {
+  color: $font-advantages;
+  margin-right: 30px;
+
+  @include phones {
+    margin-right: 0;
+    margin-bottom: 13px;
+  }
+
+  div:first-of-type {
+    font-weight: bold;
+    font-size: 71px;
+    background: linear-gradient(to right, $dark-red, $dark-blue);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 53px;
+    margin-bottom: 8px;
+
+    @include tablets {
+      font-size: 58px;
+      margin-bottom: 0;
+    }
+  }
+
+  div:last-of-type {
+    font-size: 14px;
+  }
+}
+
+.advantages__info {
+  h3 {
+    margin: 0 0 12px 0;
+    font-weight: bold;
+    font-size: 22px;
+
+    @include tablets {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    @include phones {
+      margin-bottom: 5px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-weight: 300;
+
+    @include phones {
+      line-height: 140%;
+    }
+  }
+}
