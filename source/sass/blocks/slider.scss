@@ -14,6 +14,12 @@
     }
   }
 
+  button:last-of-type[type="button"] {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
   svg {
     @include phones {
       width: 10px;
@@ -22,118 +28,12 @@
   }
 }
 
-button:last-of-type[type="button"] {
-  svg {
-    transform: rotate(180deg);
-  }
-}
-
-.slider__wrapper {
+.slider-wrapper {
   overflow: hidden;
 
   > ul {
-    display: flex;
-    justify-content: space-between;
     list-style: none;
     margin: 0;
     padding: 0;
-
-    > li {
-      min-width: 25%;
-      padding: 20px;
-
-      @include tablets {
-        min-width: 50%;
-      }
-
-      @include phones {
-        min-width: 100%;
-        padding: 7px;
-      }
-    }
-  }
-}
-
-.slider__item {
-  position: relative;
-  height: 100%;
-  max-height: 294px;
-
-  @include phones {
-    max-height: 274px;
-  }
-
-  &:hover .slider__info {
-    justify-content: center;
-    background: rgba($font-main, 0.9);
-  }
-
-  &:hover ul,
-  &:hover h4 {
-    display: block;
-  }
-
-  &:hover h3 {
-    margin-bottom: 5px;
-  }
-
-  img {
-    @include phones {
-      height: 274px;
-    }
-  }
-}
-
-.slider__info {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  color: $white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  border: 1px solid $black;
-  box-shadow: 0 4px 4px rgba($black, 0.25);
-
-  @include tablets {
-    box-shadow: none;
-    border: transparent;
-  }
-
-  h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0 0 25px 0;
-  }
-
-  h4 {
-    display: none;
-    margin: 0 0 38px 0;
-  }
-
-  ul {
-    display: none;
-    padding: 0 30px 0 72px;
-
-    @include phones {
-      padding: 0 15px 0 50px;
-    }
-  }
-
-  li {
-    padding: 10px 0;
-    list-style: disc;
-    font-size: 14px;
-  }
-
-  li:first-of-type {
-    padding-top: 0;
-  }
-
-  li:last-of-type {
-    padding-bottom: 0;
   }
 }

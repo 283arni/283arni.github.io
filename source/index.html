@@ -21,7 +21,7 @@
       </div>
       <div class="hero__main">
         <div class="hero__welcome">
-          <h3>омск</h3>
+          <span>омск</span>
           <div class="hero__title">
             <h1>фитнес центр</h1>
             <ul>
@@ -186,21 +186,21 @@
   <section class="trainers">
     <div class="container">
       <h2>Тренеры</h2>
-      <div class="slider">
+      <div class="trainers__slider slider" id="slider">
         <button type="button">
           <svg width="16" height="32">
             <use xlink:href="img/sprite_auto.svg#arrow"></use>
           </svg>
         </button>
-        <div class="slider__wrapper">
+        <div class="trainers__slider-wrapper slider-wrapper">
           <ul>
             <li>
-              <div class="slider__item">
+              <div class="trainers__item">
                 <picture>
                   <source srcset="img/trainer-1.webp 1x, img/trainer-1@2x.webp 2x" type="image/webp">
                   <img src="img/trainer-1.jpg" srcset="img/trainer-1@2x.jpg 2x" width="260" height="294" alt="Тренер">
                 </picture>
-                <div class="slider__info">
+                <div class="trainers__info">
                   <h3>Анна Павлова</h3>
                   <h4>CrossFit</h4>
                   <ul>
@@ -212,12 +212,12 @@
               </div>
             </li>
             <li>
-              <div class="slider__item">
+              <div class="trainers__item slider-item">
                 <picture>
                   <source srcset="img/trainer-2.webp 1x, img/trainer-2@2x.webp 2x" type="image/webp">
                   <img src="img/trainer-2.jpg" srcset="img/trainer-2@2x.jpg 2x" width="260" height="294" alt="Тренер">
                 </picture>
-                <div class="slider__info">
+                <div class="trainers__info">
                   <h3>Алексей Лавров</h3>
                   <h4>CrossFit</h4>
                   <ul>
@@ -229,12 +229,12 @@
               </div>
             </li>
             <li>
-              <div class="slider__item">
+              <div class="trainers__item">
                 <picture>
                   <source srcset="img/trainer-3.webp 1x, img/trainer-3@2x.webp 2x" type="image/webp">
                   <img src="img/trainer-3.jpg" srcset="img/trainer-3@2x.jpg 2x" width="260" height="294" alt="Тренер">
                 </picture>
-                <div class="slider__info">
+                <div class="trainers__info">
                   <h3>Александр Пашков</h3>
                   <h4>CrossFit</h4>
                   <ul>
@@ -246,12 +246,12 @@
               </div>
             </li>
             <li>
-              <div class="slider__item">
+              <div class="trainers__item">
                 <picture>
                   <source srcset="img/trainer-4.webp 1x, img/trainer-4@2x.webp 2x" type="image/webp">
                   <img src="img/trainer-4.jpg" srcset="img/trainer-4@2x.jpg 2x" width="260" height="294" alt="Тренер">
                 </picture>
-                <div class="slider__info">
+                <div class="trainers__info">
                   <h3>Мария Кетова</h3>
                   <h4>CrossFit</h4>
                   <ul>
@@ -263,12 +263,12 @@
               </div>
             </li>
             <li>
-              <div class="slider__item">
+              <div class="trainers__item">
                 <picture>
                   <source srcset="img/trainer-1.webp 1x, img/trainer-1@2x.webp 2x" type="image/webp">
                   <img src="img/trainer-1.jpg" srcset="img/trainer-1@2x.jpg 2x" width="260" height="294" alt="Тренер">
                 </picture>
-                <div class="slider__info">
+                <div class="trainers__info">
                   <h3>Анна Павлова</h3>
                   <h4>CrossFit</h4>
                   <ul>
@@ -280,12 +280,12 @@
               </div>
             </li>
             <li>
-              <div class="slider__item">
+              <div class="trainers__item">
                 <picture>
                   <source srcset="img/trainer-2.webp 1x, img/trainer-2@2x.webp 2x" type="image/webp">
                   <img src="img/trainer-2.jpg" srcset="img/trainer-2@2x.jpg 2x" width="260" height="294" alt="Тренер">
                 </picture>
-                <div class="slider__info">
+                <div class="trainers__info">
                   <h3>Алексей Лавров</h3>
                   <h4>CrossFit</h4>
                   <ul>
@@ -297,12 +297,12 @@
               </div>
             </li>
             <li>
-              <div class="slider__item">
+              <div class="trainers__item">
                 <picture>
                   <source srcset="img/trainer-3.webp 1x, img/trainer-3@2x.webp 2x" type="image/webp">
                   <img src="img/trainer-3.jpg" srcset="img/trainer-3@2x.jpg 2x" width="260" height="294" alt="Тренер">
                 </picture>
-                <div class="slider__info">
+                <div class="trainers__info">
                   <h3>Александр Пашков</h3>
                   <h4>CrossFit</h4>
                   <ul>
@@ -314,12 +314,12 @@
               </div>
             </li>
             <li>
-              <div class="slider__item">
+              <div class="trainers__item">
                 <picture>
                   <source srcset="img/trainer-4.webp 1x, img/trainer-4@2x.webp 2x" type="image/webp">
                   <img src="img/trainer-4.jpg" srcset="img/trainer-4@2x.jpg 2x" width="260" height="294" alt="Тренер">
                 </picture>
-                <div class="slider__info">
+                <div class="trainers__info">
                   <h3>Мария Кетова</h3>
                   <h4>CrossFit</h4>
                   <ul>
@@ -430,6 +430,80 @@
             <p>Корпоративный фитнес  с командой</p>
             <a href="#">подробнее</a>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="reviews">
+    <h2>Отзывы</h2>
+    <div class="reviews__slider slider" id="slider-reviews">
+      <button type="button">
+        <svg width="16" height="32">
+          <use xlink:href="img/sprite_auto.svg#arrow"></use>
+        </svg>
+      </button>
+      <div class="reviews__slider-wrapper slider-wrapper">
+        <ul>
+          <li>
+            <div class="reviews__item">
+              <div class="reviews__picture">
+                <picture>
+                  <source srcset="img/reviewer.webp 1x, img/reviewer@2x.webp 2x" type="image/webp">
+                  <img src="img/reviewer.png" srcset="img/reviewer@2x.png 2x" width="80" height="80" alt="Аватар">
+                </picture>
+              </div>
+              <div class="reviews__info">
+                <h3>Анна Орлова</h3>
+                <p>&#171;Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей&#187;</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="reviews__item">
+              <div class="reviews__picture">
+                <picture>
+                  <source srcset="img/reviewer.webp 1x, img/reviewer@2x.webp 2x" type="image/webp">
+                  <img src="img/reviewer.png" srcset="img/reviewer@2x.png 2x" width="80" height="80" alt="Аватар">
+                </picture>
+              </div>
+              <div class="reviews__info">
+                <h3>Яна Павлова</h3>
+                <p>&#171;Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей&#187;</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button type="button">
+        <svg width="16" height="32">
+          <use xlink:href="img/sprite_auto.svg#arrow"></use>
+        </svg>
+      </button>
+    </div>
+  </section>
+  <section class="connect">
+    <div class="connect__free">
+      <h2>Бесплатное занятие</h2>
+      <form action="">
+        <input type="text" placeholder="Имя">
+        <input type="tel" placeholder="Телефон">
+        <button type="submit">отправить</button>
+      </form>
+    </div>
+    <div class="connect__contacts">
+      <h2>Контакты</h2>
+      <div class="connect__wrapper">
+        <div class="connect__address">
+          <div>Адрес:</div>
+          <address>г. Омск, ул. 60 лет Октября, 7</address>
+          <div>График работы:</div>
+          <span>Пн-Вс: с 8:00 до 22:00</span>
+        </div>
+        <div class="connect__communication">
+          <div>Телефон:</div>
+          <span>8-800-555-55-55</span>
+          <div>Email:</div>
+          <span>omsk@supergym.ru</span>
         </div>
       </div>
     </div>

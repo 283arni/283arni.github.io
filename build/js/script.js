@@ -48,12 +48,13 @@
     NEXT: 'next'
   };
 
-  var slider = document.querySelector('.slider');
+  var sliderReviews = document.querySelector('#slider-reviews');
+  var slider = document.querySelector('#slider');
 
   function createSlider(selector) {
-    var items = selector.querySelectorAll('.slider__wrapper>ul>li');
+    var items = selector.querySelectorAll('.slider-wrapper>ul>li');
     var item = items[0];
-    var sliderWrapper = selector.querySelector('.slider__wrapper ul');
+    var sliderList = selector.querySelector('.slider-wrapper ul');
     var btnLeft = selector.querySelector('button:first-of-type');
     var btnRight = selector.querySelector('button:last-of-type');
     var currentItem = Numbers.START;
@@ -91,9 +92,10 @@
     }
 
     function translate() {
-      sliderWrapper.style.transform = 'translateX(-' + currentItem + '00%)';
+      sliderList.style.transform = 'translateX(-' + currentItem + '00%)';
     }
   }
 
   createSlider(slider);
+  createSlider(sliderReviews);
 })();

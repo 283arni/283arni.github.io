@@ -1,0 +1,29 @@
+.connect {
+  h2 {
+    font-family: $bebas;
+    font-size: 49px;
+    letter-spacing: 0.1rem;
+  }
+}
+
+.connect__free {
+  color: $white;
+  background: $font-main;
+
+  button {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+}
+
+.connect__wrapper {
+  address,
+  span {
+    font-size: 14px;
+  }
+}
+
+.connect__address {
+  border-right: 1px solid $dark-gray;
+}
