@@ -1,29 +1,246 @@
 .connect {
+  display: flex;
+
+  @include tablets {
+    flex-direction: column;
+  }
+
   h2 {
     font-family: $bebas;
     font-size: 49px;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.09rem;
+    margin: 0 0 40px 0;
+
+    @include tablets {
+      font-size: 42px;
+      margin-bottom: 32px;
+    }
+
+    @include phones {
+      font-size: 32px;
+      letter-spacing: 0.06rem;
+      margin-bottom: 40px;
+    }
   }
 }
 
 .connect__free {
+  width: 50%;
   color: $white;
   background: $font-main;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 
-  button {
-    font-weight: bold;
-    font-size: 14px;
-    text-transform: uppercase;
+  @include tablets {
+    width: 100%;
+    align-items: center;
+    padding-right: 30px;
+  }
+
+  @include phones {
+    padding-right: 0;
   }
 }
 
-.connect__wrapper {
+.connect__free-wrapper {
+  padding: 65px 167px;
+  width: 748px;
+
+  @include tablets {
+    padding: 70px 0;
+    width: 65%;
+  }
+
+  @include phones {
+    width: 90%;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  button {
+    width: 100%;
+    color: $white;
+    background: transparent;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 3px solid $white;
+    padding: 16px 0;
+    letter-spacing: 0.05rem;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
+
+.connect__fields {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+
+  @include phones {
+    flex-direction: column;
+    margin-bottom: 3px;
+  }
+
+  input {
+    width: 46%;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid $dark-gray;
+    padding-bottom: 5px;
+    margin-bottom: 28px;
+    font-size: 14px;
+    color: $white;
+
+    @include tablets {
+      width: 45%;
+    }
+
+    @include phones {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+
+    &::placeholder {
+      color: $white;
+      font-size: 14px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid $white;
+    }
+  }
+}
+
+.connect__contacts {
+  width: 50%;
+  padding: 65px 122px;
+  border: 1px solid $dark-gray;
+  border-right: 1px solid transparent;
+
+  @include tablets {
+    width: 100%;
+    padding: 65px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: transparent;
+  }
+}
+
+.connect__contacts-wrapper {
+  @include tablets {
+    padding-right: 45px;
+  }
+
+  @include phones {
+    padding-right: 0;
+    width: 92%;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+
+    @include tablets {
+      margin-bottom: 35px;
+    }
+
+    @include phones {
+      margin-bottom: 38px;
+    }
+  }
+}
+
+
+.connect__info-wrapper {
+  display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
+
   address,
   span {
     font-size: 14px;
+
+    @include tablets {
+      font-size: 18px;
+    }
+  }
+
+  address {
+    margin-bottom: 22px;
+    font-style: normal;
+
+    @include tablets {
+      margin-bottom: 28px;
+    }
+  }
+}
+
+.connect__communication {
+  padding-left: 60px;
+
+  @include tablets {
+    padding-left: 48px;
+  }
+
+  @include phones {
+    padding-left: 0;
+  }
+
+  span:first-of-type {
+    display: block;
+    margin-bottom: 23px;
+
+    @include tablets {
+      margin-bottom: 28px;
+    }
+  }
+}
+
+
+.connect__address,
+.connect__communication {
+  div {
+    font-weight: 700;
+    margin-bottom: 9px;
+
+    @include tablets {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    @include phones {
+      margin-bottom: 12px;
+    }
   }
 }
 
 .connect__address {
   border-right: 1px solid $dark-gray;
+  padding-right: 63px;
+
+  @include tablets {
+    padding-right: 50px;
+  }
+
+  @include phones {
+    padding-right: 0;
+    border-right: none;
+    margin-bottom: 26px;
+  }
 }

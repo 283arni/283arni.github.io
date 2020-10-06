@@ -9,7 +9,7 @@
   }
 
   @include phones {
-    padding: 68px 0 42px 0;
+    padding: 68px 0 37px 0;
   }
 
   &::after {
@@ -142,7 +142,7 @@
 
     @include phones {
       width: 100%;
-      min-height: 378px;
+      min-height: 380px;
     }
 
     &:hover {
@@ -201,6 +201,7 @@
 
   @include phones {
     min-height: 60px;
+    margin-bottom: 50px;
   }
 
   span:first-of-type {

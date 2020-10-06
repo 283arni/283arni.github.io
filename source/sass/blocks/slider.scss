@@ -7,16 +7,15 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    padding: 0 20px;
 
     @include phones {
       padding: 0 15px;
     }
-  }
 
-  button:last-of-type[type="button"] {
-    svg {
-      transform: rotate(180deg);
+    &:last-of-type[type="button"] {
+      svg {
+        transform: rotate(180deg);
+      }
     }
   }
 
