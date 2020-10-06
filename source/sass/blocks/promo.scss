@@ -77,13 +77,14 @@
     margin-bottom: 5px;
   }
 
-  > span {
+  > h2 {
     display: inline-block;
     font-family: $bebas;
     font-size: 90px;
     font-weight: 700;
     line-height: 90px;
     letter-spacing: 0.16rem;
+    margin: 0;
 
     @include tablets {
       font-size: 52px;
@@ -110,7 +111,7 @@
 }
 
 .promo__day-month {
-  time {
+  div {
     display: flex;
     align-items: center;
     font-size: 14px;
