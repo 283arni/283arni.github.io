@@ -144,6 +144,7 @@
 .hall__player-wrapper {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
 
   img {
     @include tablets {

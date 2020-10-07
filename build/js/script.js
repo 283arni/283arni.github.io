@@ -5,7 +5,11 @@
   var buttons = document.querySelectorAll('.subscriptions__list-buttons button');
   var prices = document.querySelectorAll('.subscriptions__price span');
   var lessons = document.querySelector('#lessons');
-  var lessonsValue = parseInt(lessons.textContent, 10);
+
+  if (lessons) {
+    var lessonsValue = parseInt(lessons.textContent, 10);
+  }
+
 
   function cleanClassActive() {
     buttons.forEach(function (button) {
@@ -52,6 +56,11 @@
   var slider = document.querySelector('#slider');
 
   function createSlider(selector) {
+
+    if (!selector) {
+      return;
+    }
+
     var items = selector.querySelectorAll('.slider-wrapper>ul>li');
     var item = items[0];
     var sliderList = selector.querySelector('.slider-wrapper ul');

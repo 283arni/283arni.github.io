@@ -503,8 +503,8 @@
         <h2>Бесплатное занятие</h2>
         <form>
           <div class="connect__fields">
-            <input type="text" placeholder="Имя">
-            <input type="tel" placeholder="Телефон">
+            <input type="text" placeholder="Имя" minlength="3" maxlength="15" required="">
+            <input type="tel" placeholder="Телефон" pattern="\+?[0-9\s\-\(\)]+" minlength="11" maxlength="12" required="">
           </div>
           <button type="submit">отправить</button>
         </form>
@@ -545,7 +545,7 @@
           <li><a href="#subscriptions">Абонементы</a></li>
           <li><a href="#sale">Акции</a></li>
           <li><a href="#trainers">Тренеры</a></li>
-          <li><a href="#">Расписание</a></li>
+          <li><a href="timetable.html">Расписание</a></li>
         </ul>
       </nav>
       <div class="footer__socials">

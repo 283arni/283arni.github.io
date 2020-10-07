@@ -1,0 +1,38 @@
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timetable {
+  h2 {
+    font-family: $bebas;
+    font-size: 49px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+.timetable__wrapper {
+  display: flex;
+  align-items: flex-end;
+
+  > ul{
+    width: 65px;
+  }
+}
+
+.timetable__days {
+  display: flex;
+
+  ul {
+    width: 148px;
+  }
+}
+
