@@ -108,3 +108,104 @@
   createSlider(slider);
   createSlider(sliderReviews);
 })();
+
+(function () {
+  var CHANGE_DAY_WEEK = 1;
+  var timetable = document.querySelector('.timetable__wrapper');
+
+  if (!timetable) {
+    return;
+  }
+
+  var lessons = timetable.querySelector('.timetable__lessons');
+  var trainings = lessons.querySelectorAll('div');
+  var wrapper = timetable.querySelector('.timetable__shadow');
+  var button = timetable.querySelector('button');
+  var items = lessons.querySelectorAll('li');
+  var timeZone = timetable.querySelectorAll('.timetable__time li');
+  var dayZone = timetable.querySelectorAll('.timetable__week li');
+
+  function addClassActive(elements, data) {
+    elements.forEach(function (item, i) {
+      if (i === data) {
+        item.classList.add('active');
+      }
+    });
+  }
+
+  function removeClassActive(elements) {
+    elements.forEach(function (item) {
+      item.classList.remove('active');
+    });
+  }
+
+  function openListClick() {
+    dayZone.forEach(function (day) {
+      day.classList.add('open');
+      day.classList.remove('main-day');
+      button.classList.add('active');
+      wrapper.classList.add('open');
+    });
+
+    removeClassActive(trainings);
+    button.addEventListener('click', closeListClick);
+  }
+
+  function closeListClick() {
+    dayZone.forEach(function (day) {
+      day.classList.remove('open');
+      wrapper.classList.remove('open');
+      button.classList.remove('active');
+    });
+
+    button.removeEventListener('click', closeListClick);
+  }
+
+  lessons.addEventListener('mouseover', function (evt) {
+    if (evt.target.tagName !== 'LI') {
+      return;
+    }
+
+    var time = +evt.target.dataset.time;
+    var day = +evt.target.parentElement.dataset.day - CHANGE_DAY_WEEK;
+
+    evt.target.classList.add('active');
+
+    addClassActive(dayZone, day);
+    addClassActive(timeZone, time);
+
+  });
+
+  lessons.addEventListener('mouseout', function (evt) {
+
+    if (evt.target.tagName !== 'LI') {
+      return;
+    }
+
+    evt.target.classList.remove('active');
+
+    removeClassActive(timeZone);
+    removeClassActive(dayZone);
+
+  });
+
+
+  items.forEach(function (item) {
+    item.addEventListener('click', function (evt) {
+      evt.target.classList.toggle('choosed');
+    });
+  });
+
+
+  dayZone.forEach(function (day, i) {
+    trainings[0].classList.add('active');
+
+    day.addEventListener('click', function () {
+      addClassActive(trainings, i);
+      day.classList.add('main-day');
+      closeListClick();
+    });
+  });
+
+  button.addEventListener('click', openListClick);
+})();

@@ -1,3 +1,19 @@
+.timetable__shadow {
+  display: none;
+
+  &.open {
+    @include phones {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba($white, 0.8);
+    }
+  }
+}
+
 .wrapper {
   height: 100vh;
   display: flex;
@@ -9,30 +25,239 @@
   h2 {
     font-family: $bebas;
     font-size: 49px;
+    text-align: center;
+    margin: 16px 0 48px 0;
+    letter-spacing: 0.09rem;
+
+    @include tablets {
+      font-size: 42px;
+      margin-bottom: 38px;
+    }
+
+    @include phones {
+      font-size: 32px;
+    }
   }
+}
+
+
+.timetable__wrapper {
+  position: relative;
+  font-size: 18px;
+  display: flex;
 
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
   }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px 8px 0;
+  }
 }
 
-
-.timetable__wrapper {
-  display: flex;
-  align-items: flex-end;
-
-  > ul{
+.timetable__time {
+  li:not(:first-of-type) {
+    border: 2px solid $advanteges-blue;
     width: 65px;
+    min-height: 110px;
+
+    @include tablets {
+      min-height: 108px;
+    }
+
+    @include phones {
+      min-height: 80px;
+      width: 60px;
+    }
+
+    &.active {
+      border: 2px solid transparent;
+      color: $white;
+      background: $red;
+    }
+  }
+
+  li:first-of-type {
+    width: 65px;
+    min-height: 66px;
+
+    @include phones {
+      width: 60px;
+      min-height: 60px;
+    }
   }
 }
 
 .timetable__days {
-  display: flex;
+  @include tablets {
+    scrollbar-track-color: rgba($red, 0.1);
+    scrollbar-face-color: $red;
+  }
 
-  ul {
-    width: 148px;
+  &::-webkit-scrollbar {
+    @include tablets {
+      height: 4px;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba($red, 0.1);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $red;
+  }
+
+  @include tablets {
+    max-width: 616px;
+    overflow: hidden;
+    overflow-x: auto;
+  }
+
+  @include phones {
+    min-width: 222px;
+    overflow-x: hidden;
+  }
+
+  li {
+    min-width: 148px;
+    border: 2px solid $advanteges-blue;
+    min-height: 66px;
+
+    @include tablets {
+      min-width: 146px;
+    }
+
+    @include phones {
+      min-width: 222px;
+    }
   }
 }
 
+.timetable__week {
+  position: relative;
+
+  @include phones {
+    height: 60px;
+    margin-bottom: 8px;
+    z-index: 20;
+  }
+
+  ul {
+    display: flex;
+
+    @include phones {
+      width: 173px;
+      flex-direction: column;
+      position: absolute;
+      min-height: 100%;
+    }
+  }
+
+  li {
+    @include phones {
+      position: absolute;
+      min-width: 100%;
+      min-height: 60px;
+      margin: 0;
+      background: $white;
+    }
+
+    &:first-of-type {
+      z-index: 10;
+    }
+
+    &:not(:first-of-type) {
+      @include phones {
+        border-top: none;
+      }
+    }
+
+    &.open {
+      position: static;
+    }
+
+    &.main-day {
+      z-index: 20;
+      border: 2px solid $advanteges-blue;
+    }
+
+    &.active {
+      border: 2px solid transparent;
+      color: $white;
+      background: $red;
+    }
+  }
+
+  button {
+    display: none;
+
+    @include phones {
+      display: block;
+      position: absolute;
+      right: 0;
+      height: 100%;
+      width: 52px;
+      background: $white;
+      border: 2px solid $advanteges-blue;
+    }
+
+    &.active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.timetable__lessons {
+  display: flex;
+
+  @include phones {
+    position: relative;
+    width: 100%;
+  }
+
+  div {
+    @include phones {
+      position: absolute;
+
+      &.active {
+        z-index: 15;
+      }
+    }
+  }
+
+  li {
+    min-height: 110px;
+    background: $background-sub;
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    @include tablets {
+      min-height: 108px;
+    }
+
+    @include phones {
+      min-height: 80px;
+      margin-right: 0;
+      min-width: 222px;
+    }
+
+    &.choosed {
+      border: 2px solid $advanteges-blue;
+      background: $white;
+    }
+
+    &.active {
+      color: $red;
+      background: $white;
+      border: 2px solid $red;
+    }
+  }
+}

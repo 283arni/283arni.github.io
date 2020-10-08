@@ -14,6 +14,7 @@
       <div class="timetable__wrapper">
         <div class="timetable__time">
           <ul>
+            <li></li>
             <li>08:00</li>
             <li>12:00</li>
             <li>18:00</li>
@@ -21,72 +22,85 @@
           </ul>
         </div>
         <div class="timetable__days">
-          <div class="timetable__monday">
+          <div class="timetable__week">
             <ul>
               <li>Понедельник</li>
-              <li>CrossFit</li>
-              <li>Body Sculpt</li>
-              <li>Functional</li>
-              <li>Stretching</li>
-            </ul>
-          </div>
-          <div class="timetable__tuesday">
-            <ul>
               <li>Вторник</li>
-              <li>Aerostretching</li>
-              <li>CrossFit</li>
-              <li>Body Sculpt</li>
-              <li>Functional</li>
-            </ul>
-          </div>
-          <div class="timetable__wednesday">
-            <ul>
               <li>Среда</li>
-              <li>Hot Iron</li>
-              <li>Aerostretching</li>
-              <li>CrossFit</li>
-              <li>Body Sculpt</li>
-            </ul>
-          </div>
-          <div class="timetable__thursday">
-            <ul>
               <li>Четверг</li>
-              <li>Pilates</li>
-              <li>Hot Iron</li>
-              <li>Aerostretching</li>
-              <li>CrossFit</li>
-            </ul>
-          </div>
-          <div class="timetable__friday">
-            <ul>
               <li>Пятница</li>
-              <li>Stretching</li>
-              <li>Pilates</li>
-              <li>Hot Iron</li>
-              <li>Aerostretching</li>
-            </ul>
-          </div>
-          <div class="timetable__saturday">
-            <ul>
               <li>Суббота</li>
-              <li>Functional</li>
-              <li>Stretching</li>
-              <li>Pilates</li>
-              <li>Hot Iron</li>
-            </ul>
-          </div>
-          <div class="timetable__sunday">
-            <ul>
               <li>Воскресенье</li>
-              <li>Body Sculpt</li>
-              <li>Functional</li>
-              <li>Stretching</li>
-              <li>Pilates</li>
             </ul>
+            <button type="button">
+              <svg width="19" height="10">
+                <use xlink:href="img/sprite_auto.svg#arrow-week"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="timetable__lessons">
+            <div class="timetable__monday">
+              <ul data-day="1">
+                <li data-time="1">CrossFit</li>
+                <li data-time="2">Body Sculpt</li>
+                <li data-time="3">Functional</li>
+                <li data-time="4">Stretching</li>
+              </ul>
+            </div>
+            <div class="timetable__tuesday">
+              <ul data-day="2">
+                <li data-time="1">Aerostretching</li>
+                <li data-time="2">CrossFit</li>
+                <li data-time="3">Body Sculpt</li>
+                <li data-time="4">Functional</li>
+              </ul>
+            </div>
+            <div class="timetable__wednesday">
+              <ul data-day="3">
+                <li data-time="1">Hot Iron</li>
+                <li data-time="2">Aerostretching</li>
+                <li data-time="3">CrossFit</li>
+                <li data-time="4">Body Sculpt</li>
+              </ul>
+            </div>
+            <div class="timetable__thursday">
+              <ul data-day="4">
+                <li data-time="1">Pilates</li>
+                <li data-time="2">Hot Iron</li>
+                <li data-time="3">Aerostretching</li>
+                <li data-time="4">CrossFit</li>
+              </ul>
+            </div>
+            <div class="timetable__friday">
+              <ul data-day="5">
+                <li data-time="1">Stretching</li>
+                <li data-time="2">Pilates</li>
+                <li data-time="3">Hot Iron</li>
+                <li data-time="4">Aerostretching</li>
+              </ul>
+            </div>
+            <div class="timetable__saturday">
+              <ul data-day="6">
+                <li data-time="1">Functional</li>
+                <li data-time="2">Stretching</li>
+                <li data-time="3">Pilates</li>
+                <li data-time="4">Hot Iron</li>
+              </ul>
+            </div>
+            <div class="timetable__sunday">
+              <ul data-day="7">
+                <li data-time="1">Body Sculpt</li>
+                <li data-time="2">Functional</li>
+                <li data-time="3">Stretching</li>
+                <li data-time="4">Pilates</li>
+              </ul>
+            </div>
           </div>
         </div>
+        <div class="timetable__shadow"></div>
       </div>
     </section>
   </div>
+  <script src="js/script.js"></script>
 </body>
 </html>
