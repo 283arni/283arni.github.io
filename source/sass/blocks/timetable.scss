@@ -62,7 +62,7 @@
 
 .timetable__time {
   li:not(:first-of-type) {
-    border: 2px solid $advanteges-blue;
+    border: 2px solid $advantages-blue;
     width: 65px;
     min-height: 110px;
 
@@ -126,7 +126,7 @@
 
   li {
     min-width: 148px;
-    border: 2px solid $advanteges-blue;
+    border: 2px solid $advantages-blue;
     min-height: 66px;
 
     @include tablets {
@@ -184,7 +184,7 @@
 
     &.main-day {
       z-index: 20;
-      border: 2px solid $advanteges-blue;
+      border: 2px solid $advantages-blue;
     }
 
     &.active {
@@ -204,7 +204,11 @@
       height: 100%;
       width: 52px;
       background: $white;
-      border: 2px solid $advanteges-blue;
+      border: 2px solid $advantages-blue;
+    }
+
+    &:active {
+      opacity: 0.7;
     }
 
     &.active {
@@ -250,7 +254,7 @@
     }
 
     &.choosed {
-      border: 2px solid $advanteges-blue;
+      border: 2px solid $advantages-blue;
       background: $white;
     }
 
