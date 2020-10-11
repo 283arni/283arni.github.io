@@ -1,4 +1,3 @@
-
 'use strict';
 
 (function () {
@@ -41,13 +40,13 @@
 
 (function () {
 
-  var Numbers = {
+  var Numeral = {
     START: 0,
-    СORRECTER: 1,
-    DEVIDE: 100
+    CORRECTOR: 1,
+    DIVIDE: 100
   };
 
-  var Controls = {
+  var Control = {
     PREV: 'prev',
     NEXT: 'next'
   };
@@ -66,35 +65,35 @@
     var sliderList = selector.querySelector('.slider-wrapper ul');
     var btnLeft = selector.querySelector('button:first-of-type');
     var btnRight = selector.querySelector('button:last-of-type');
-    var currentItem = Numbers.START;
-    var steps = (parseInt(getComputedStyle(item).minWidth, 10) * items.length) / Numbers.DEVIDE;
+    var currentItem = Numeral.START;
+    var steps = (parseInt(getComputedStyle(item).minWidth, 10) * items.length) / Numeral.DIVIDE;
 
     btnLeft.addEventListener('click', function (e) {
       e.preventDefault();
-      sliderGo(Controls.PREV);
+      sliderGo(Control.PREV);
     });
 
     btnRight.addEventListener('click', function (e) {
       e.preventDefault();
-      sliderGo(Controls.NEXT);
+      sliderGo(Control.NEXT);
     });
 
 
     function sliderGo(way) {
-      if (way === Controls.NEXT) {
+      if (way === Control.NEXT) {
         currentItem++;
       }
 
-      if (way === Controls.PREV) {
+      if (way === Control.PREV) {
         currentItem--;
       }
 
       if (currentItem === steps) {
-        currentItem = Numbers.START;
+        currentItem = Numeral.START;
       }
 
-      if (currentItem < Numbers.START) {
-        currentItem = steps - Numbers.СORRECTER;
+      if (currentItem < Numeral.START) {
+        currentItem = steps - Numeral.СORRECTER;
       }
 
       translate();
