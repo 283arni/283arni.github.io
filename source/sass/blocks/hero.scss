@@ -26,9 +26,12 @@
   }
 
   a {
-    cursor: pointer;
-
     svg {
+      @include tablets {
+        width: 82px;
+        height: 20px;
+      }
+
       @include phones {
         width: 68px;
         height: 15px;

@@ -419,9 +419,11 @@
         <div class="sale__wrapper">
           <div class="sale__unlimited">
             <div class="sale__description">
-              <div>Год</div>
-              <div>4999</div>
-              <p>Безлимитный абонемент в тренажерный зал</p>
+              <div class="sale__description-wrapper">
+                <div>Год</div>
+                <div>4999</div>
+                <p>Безлимитный абонемент в тренажерный зал</p>
+              </div>
               <a href="#">подробнее</a>
             </div>
             <div class="sale__picture">
@@ -436,13 +438,17 @@
           </div>
           <div class="sale__offers">
             <div class="sale__discount">
-              <h3>Месяц бесплатно</h3>
-              <p>Приведи друга, получи абонемент в подарок</p>
+              <div class="sale__discount-wrapper">
+                <h3>Месяц бесплатно</h3>
+                <p>Приведи друга, получи абонемент в подарок</p>
+              </div>
               <a href="#">подробнее</a>
             </div>
             <div class="sale__discount">
-              <h3>Скидка 20%</h3>
-              <p>Корпоративный фитнес  с командой</p>
+              <div class="sale__discount-wrapper">
+                <h3>Скидка 20%</h3>
+                <p>Корпоративный фитнес  с командой</p>
+              </div>
               <a href="#">подробнее</a>
             </div>
           </div>
@@ -501,14 +507,16 @@
     <section class="connect">
       <div class="connect__free">
         <div class="connect__free-wrapper">
-          <h2>Бесплатное занятие</h2>
-          <form>
-            <div class="connect__fields">
-              <input type="text" placeholder="Имя" minlength="3" maxlength="15" required>
-              <input type="tel" placeholder="Телефон" pattern="\+?[0-9\s\-\(\)]+" minlength="11" maxlength="12" required>
-            </div>
-            <button type="submit">отправить</button>
-          </form>
+          <div class="connect__form">
+            <h2>Бесплатное занятие</h2>
+            <form>
+              <div class="connect__fields">
+                <input type="text" placeholder="Имя" minlength="3" maxlength="15" required>
+                <input type="tel" placeholder="Телефон" pattern="\+?[0-9\s\-\(\)]+" minlength="11" maxlength="12" required>
+              </div>
+              <button type="submit">отправить</button>
+            </form>
+          </div>
         </div>
       </div>
       <div class="connect__contacts">
@@ -538,7 +546,7 @@
         <ul>
           <li>
             <a>
-              <svg width="86" height="20">
+              <svg width="89" height="20">
                 <use xlink:href="img/sprite_auto.svg#supergym"></use>
               </svg>
             </a>

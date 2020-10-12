@@ -33,6 +33,7 @@
     vertical-align: middle;
     font-weight: bold;
     text-transform: uppercase;
+    letter-spacing: 0.05em;
 
     &:hover {
       border-bottom: 1px solid transparent;
@@ -43,6 +44,7 @@
 .sale__wrapper {
   display: flex;
   justify-content: space-between;
+  max-height: 462px;
 
   @include tablets {
     flex-direction: column;
@@ -50,7 +52,7 @@
 }
 
 .sale__unlimited {
-  width: 48.5%;
+  width: 48.2%;
   display: flex;
 
   @include tablets {
@@ -65,7 +67,11 @@
 
 
 .sale__description {
-  padding: 38px 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 38px 45px 45px 45px;
   background: $red;
   color: $white;
 
@@ -73,6 +79,14 @@
     padding-bottom: 45px;
   }
 
+  a {
+    border-bottom: 1px solid $white;
+    color: $white;
+    font-size: 14px;
+  }
+}
+
+.sale__description-wrapper {
   div:first-of-type {
     font-weight: bold;
     font-size: 28px;
@@ -81,7 +95,8 @@
   div:last-of-type {
     font-weight: bold;
     font-size: 70px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    line-height: 72px;
 
     @include phones {
       margin-bottom: 12px;
@@ -90,17 +105,12 @@
 
   p {
     font-size: 18px;
-    margin: 0 0 194px 0;
+    margin: 0;
+    line-height: 140%;
 
     @include phones {
       margin-bottom: 33px;
     }
-  }
-
-  a {
-    border-bottom: 1px solid $white;
-    color: $white;
-    font-size: 14px;
   }
 }
 
@@ -150,11 +160,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  min-height: 46%;
+  min-height: 45.6%;
   color: $advantages-blue;
   border: 7px solid;
   border-image: linear-gradient(148.82deg, $dark-red 0.85%, $dark-blue 100%) 7;
-  padding: 22px 30px 32px 30px;
+  padding: 22px 28px 28px 28px;
 
   @include tablets {
     min-height: auto;
@@ -174,10 +184,19 @@
     }
   }
 
+  a {
+    border-bottom: 1px solid $advantages-blue;
+    color: $advantages-blue;
+    font-size: 12px;
+  }
+}
+
+.sale__discount-wrapper {
+
   h3 {
     font-weight: bold;
     font-size: 26px;
-    margin: 0;
+    margin: 0 0 12px 0;
 
     @include tablets {
       margin-bottom: 13px;
@@ -185,7 +204,7 @@
   }
 
   p {
-    margin: 0 0 65px 0;
+    margin: 0;
 
     @include tablets {
       margin-bottom: 55px;
@@ -194,11 +213,5 @@
     @include phones {
       margin-bottom: 32px;
     }
-  }
-
-  a {
-    border-bottom: 1px solid $advantages-blue;
-    color: $advantages-blue;
-    font-size: 12px;
   }
 }

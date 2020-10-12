@@ -31,7 +31,7 @@
 }
 
 .footer__nav {
-  width: 69%;
+  width: 68.6%;
 
   @include tablets {
     width: 79%;
@@ -44,6 +44,7 @@
   ul {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
 
     @include phones {
@@ -61,7 +62,7 @@
     }
 
     &:first-of-type {
-      margin-right: 240px;
+      margin-right: 237px;
 
       @include tablets {
         margin-right: 30px;
