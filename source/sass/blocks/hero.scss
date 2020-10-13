@@ -1,5 +1,6 @@
 .hero {
   background: conic-gradient(from 130.31deg at 16.03% 39.06%, $dark-red -46.69deg, $dark-blue 32.24deg, $dark-red 313.31deg, $dark-blue 392.24deg);
+  background-color: $dark-blue;
   padding: 30px 0 47px 0;
 
   @include tablets {
@@ -26,6 +27,11 @@
   }
 
   a {
+
+    &:hover {
+      opacity: 1;
+    }
+
     svg {
       @include tablets {
         width: 82px;

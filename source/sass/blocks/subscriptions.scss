@@ -120,6 +120,7 @@
 
   ul {
     justify-content: space-between;
+    flex-wrap: wrap;
 
     @include tablets {
       flex-direction: column;

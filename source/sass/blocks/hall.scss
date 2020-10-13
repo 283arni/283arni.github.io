@@ -172,7 +172,7 @@
   button {
     background: transparent;
     border-color: transparent;
-    outline: none;
+    // outline: none;
     cursor: pointer;
     transition: 0.2s;
 
@@ -183,6 +183,10 @@
     &:active {
       border-color: $dark-red;
     }
+
+    // &:focus {
+    //   outline: rgba($dark-blue, 0.8);
+    // }
 
     img {
       width: 73px;

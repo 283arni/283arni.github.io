@@ -220,8 +220,13 @@
     padding-left: 0;
   }
 
-  span:first-of-type {
+  a {
     display: block;
+    font-size: 14px;
+    color: $font-main;
+  }
+
+  a:first-of-type {
     margin-bottom: 23px;
 
     @include tablets {

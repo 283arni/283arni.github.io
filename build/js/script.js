@@ -1,6 +1,8 @@
 'use strict';
 
 (function () {
+  var START_BUTTON = 0;
+
   var buttons = document.querySelectorAll('.subscriptions__list-buttons button');
   var prices = document.querySelectorAll('.subscriptions__price span');
   var lessons = document.querySelector('#lessons');
@@ -23,8 +25,12 @@
     });
   }
 
-  buttons.forEach(function (button) {
+  buttons.forEach(function (button, i) {
     var buttonValue = +button.dataset.value;
+
+    if (i === START_BUTTON) {
+      button.classList.add('active');
+    }
 
     button.addEventListener('click', function () {
       cleanClassActive();
@@ -207,4 +213,44 @@
   });
 
   button.addEventListener('click', openListClick);
+})();
+
+(function () {
+  var links = document.querySelectorAll('[href^="#"]');
+  var speed = 0.5;
+
+  if (!links) {
+    return;
+  }
+
+  links.forEach(function (item) {
+    item.addEventListener('click', function (evt) {
+      evt.preventDefault();
+
+      var anchor = document.querySelector(item.getAttribute('href'));
+      var coordAnchor = anchor.getBoundingClientRect().top;
+      var windowY = window.pageYOffset;
+
+      var start = null;
+
+      requestAnimationFrame(step);
+
+      function step(time) {
+        if (start === null) {
+          start = time;
+        }
+        var progress = time - start;
+
+        var coordY =
+          coordAnchor < 0
+            ? Math.max(windowY - progress / speed, windowY + coordAnchor)
+            : Math.min(windowY + progress / speed, windowY + coordAnchor);
+
+        window.scrollTo(0, coordY);
+        if (coordY !== windowY + coordAnchor) {
+          requestAnimationFrame(step);
+        }
+      }
+    });
+  });
 })();

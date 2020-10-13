@@ -87,7 +87,7 @@
                 <img src="img/hall-2.jpg" srcset="img/hall-2@2x.jpg 2x" width="364" height="228" alt="Другой тренажерный зал">
               </picture>
               <div class="hall__control">
-                <button type="button">
+                <button type="button" aria-label="play">
                   <!-- 1х: 100px; 2x: 200px -->
                   <img src="img/play.png" srcset="img/play@2x.png 2x" width="100" height="100" alt="Кнопка play">
                 </button>
@@ -193,7 +193,7 @@
       <div class="container">
         <h2>Тренеры</h2>
         <div class="trainers__slider slider" id="slider">
-          <button type="button">
+          <button type="button" aria-label="Влево">
             <svg width="16" height="32">
               <use xlink:href="img/sprite_auto.svg#arrow"></use>
             </svg>
@@ -280,7 +280,7 @@
                     <img src="img/trainer-1.jpg" srcset="img/trainer-1@2x.jpg 2x" width="260" height="294" alt="Тренер">
                   </picture>
                   <div class="trainers__info">
-                    <h3>Анна Павлова</h3>
+                    <h3>Оля Павлова</h3>
                     <h4>CrossFit</h4>
                     <ul>
                       <li>Certified Level 3 Trainer</li>
@@ -298,7 +298,7 @@
                     <img src="img/trainer-2.jpg" srcset="img/trainer-2@2x.jpg 2x" width="260" height="294" alt="Тренер">
                   </picture>
                   <div class="trainers__info">
-                    <h3>Алексей Лавров</h3>
+                    <h3>Олег Лавров</h3>
                     <h4>CrossFit</h4>
                     <ul>
                       <li>Certified Level 3 Trainer</li>
@@ -316,7 +316,7 @@
                     <img src="img/trainer-3.jpg" srcset="img/trainer-3@2x.jpg 2x" width="260" height="294" alt="Тренер">
                   </picture>
                   <div class="trainers__info">
-                    <h3>Александр Пашков</h3>
+                    <h3>Вася Пашков</h3>
                     <h4>CrossFit</h4>
                     <ul>
                       <li>Certified Level 3 Trainer</li>
@@ -334,7 +334,7 @@
                     <img src="img/trainer-4.jpg" srcset="img/trainer-4@2x.jpg 2x" width="260" height="294" alt="Тренер">
                   </picture>
                   <div class="trainers__info">
-                    <h3>Мария Кетова</h3>
+                    <h3>Катя Кетова</h3>
                     <h4>CrossFit</h4>
                     <ul>
                       <li>Certified Level 3 Trainer</li>
@@ -346,7 +346,7 @@
               </li>
             </ul>
           </div>
-          <button type="button">
+          <button type="button" aria-label="Вправо">
             <svg width="16" height="32">
               <use xlink:href="img/sprite_auto.svg#arrow"></use>
             </svg>
@@ -458,7 +458,7 @@
     <section class="reviews">
       <h2>Отзывы</h2>
       <div class="reviews__slider slider" id="slider-reviews">
-        <button type="button">
+        <button type="button" aria-label="Влево">
           <svg width="16" height="32">
             <use xlink:href="img/sprite_auto.svg#arrow"></use>
           </svg>
@@ -497,7 +497,7 @@
             </li>
           </ul>
         </div>
-        <button type="button">
+        <button type="button" aria-label="Вправо">
           <svg width="16" height="32">
             <use xlink:href="img/sprite_auto.svg#arrow"></use>
           </svg>
@@ -511,8 +511,8 @@
             <h2>Бесплатное занятие</h2>
             <form>
               <div class="connect__fields">
-                <input type="text" placeholder="Имя" minlength="3" maxlength="15" required="">
-                <input type="tel" placeholder="Телефон" pattern="\+?[0-9\s\-\(\)]+" minlength="11" maxlength="12" required="">
+                  <input type="text" placeholder="Имя" minlength="3" maxlength="15" aria-label="Текстовое поле для имя" required="">
+                  <input type="tel" placeholder="Телефон" pattern="\+?[0-9\s\-\(\)]+" minlength="11" maxlength="12" aria-label="Числовое поле для телефона" required="">
               </div>
               <button type="submit">отправить</button>
             </form>
@@ -531,9 +531,9 @@
             </div>
             <div class="connect__communication">
               <div>Телефон:</div>
-              <span>8-800-555-55-55</span>
+              <a href="tel:+78005555555">8-800-555-55-55</a>
               <div>Email:</div>
-              <span>omsk@supergym.ru</span>
+              <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
             </div>
           </div>
         </div>
@@ -563,21 +563,21 @@
           <li>
             <a href="https://vk.com/">
               <svg width="24" height="13">
-                <use xlink:href="img/sprite_auto.svg#vk"></use>
+                <use xlink:href="img/sprite_auto.svg#vk" aria-label="vk"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="https://www.instagram.com/">
               <svg width="24" height="24">
-                <use xlink:href="img/sprite_auto.svg#insta"></use>
+                <use xlink:href="img/sprite_auto.svg#insta" aria-label="instagram"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="https://facebook.com/">
               <svg width="12" height="24">
-                <use xlink:href="img/sprite_auto.svg#facebook"></use>
+                <use xlink:href="img/sprite_auto.svg#facebook" aria-label="facebook"></use>
               </svg>
             </a>
           </li>
