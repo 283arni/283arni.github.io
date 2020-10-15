@@ -1,15 +1,16 @@
 .slider {
   display: flex;
   justify-content: space-between;
-
+  align-items: center;
 
   button {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding: 0;
 
-    @include phones {
-      padding: 0 15px;
+    &:hover {
+      opacity: 0.5;
     }
 
     &:last-of-type[type="button"] {

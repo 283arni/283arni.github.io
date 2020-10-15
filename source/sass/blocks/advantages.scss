@@ -1,9 +1,9 @@
 .advantages {
   background: $background-sub;
-  padding: 115px 0 120px 0;
+  padding: 115px 0;
 
   @include tablets {
-    padding: 95px 0 100px 0;
+    padding: 95px 0;
   }
 
   @include phones {
@@ -14,6 +14,10 @@
   .container {
     @include desktop {
       max-width: 1040px;
+    }
+
+    @include phones {
+      max-width: 100%;
     }
   }
 
@@ -27,6 +31,7 @@
     @include tablets {
       font-size: 42px;
       margin-bottom: 45px;
+      letter-spacing: 0.03em;
     }
 
     @include phones {
@@ -37,9 +42,12 @@
 
 .advantages__wrapper {
   position: relative;
-  height: 308px;
+  height: 313px;
 
   @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: auto;
   }
 
@@ -51,23 +59,24 @@
 .advantages__description {
   display: flex;
   justify-content: space-between;
-  min-height: 50%;
+  height: 50%;
 
   @include phones {
     flex-direction: column;
     align-items: center;
+    width: 90%;
   }
-
 
   &:first-of-type {
     border-bottom: 1px solid rgba($bb-color, 0.2);
 
     @include tablets {
       border: transparent;
+      margin-bottom: 44px;
     }
 
     @include phones {
-      margin-bottom: 290px;
+      margin-bottom: 7px;
     }
 
     .advantages__item {
@@ -83,45 +92,40 @@
 
 .advantages__main {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
   background: $background-sub;
   color: $white;
   text-align: center;
-  padding: 0 60px;
+  padding: 0 62px;
   width: 35%;
-  height: 100%;
-  transform: translate(-50%, -50%);
+  height: 308px;
+  transform: translateX(-50%);
 
   @include tablets {
     position: static;
-    width: auto;
-    height: auto;
+    width: 65.2%;
+    height: 239px;
     transform: none;
-    padding: 45px 120px;
+    padding: 0;
+    margin-bottom: 45px;
   }
 
   @include phones {
-    position: absolute;
-    top: 43.5%;
-    right: 0;
-    left: 0;
-    padding: 0;
+    width: 100%;
   }
+}
 
-  .advantages__main-wrapper {
-    background: $advantages-blue;
-    min-height: 100%;
-    padding: 58px 30px;
+.advantages__main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $advantages-blue;
+  height: 100%;
 
-    @include tablets {
-      padding: 35px 130px;
-      width: 100%;
-    }
-
-    @include phones {
-      padding: 43px 65px;
-    }
+  @include tablets {
+    width: 100%;
   }
 
   span {
@@ -137,17 +141,26 @@
 
     @include tablets {
       font-size: 22px;
-      margin-bottom: 15px;
+      margin: 5px 0 18px 0;
     }
 
     @include phones {
-      margin-top: 0;
+      margin: 0 0 12px 0;
     }
   }
 
   p {
     margin: 0;
     line-height: 150%;
+    width: 75%;
+
+    @include tablets {
+      width: 40%;
+    }
+
+    @include phones {
+      width: 60%;
+    }
   }
 }
 
@@ -158,7 +171,7 @@
   width: 32%;
 
   @include tablets {
-    width: 48%;
+    width: 47.5%;
   }
 
   @include phones {
@@ -217,13 +230,13 @@
 
 .advantages__info {
   h3 {
-    margin: 0 0 12px 0;
+    margin: 0 0 9px 0;
     font-weight: bold;
     font-size: 22px;
 
     @include tablets {
       font-size: 20px;
-      margin-bottom: 8px;
+      margin-bottom: 5px;
     }
 
     @include phones {
@@ -234,6 +247,7 @@
   p {
     margin: 0;
     font-weight: 300;
+    line-height: 140%;
 
     @include phones {
       line-height: 140%;

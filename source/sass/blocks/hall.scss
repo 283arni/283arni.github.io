@@ -2,11 +2,11 @@
   padding: 120px 0 230px 0;
 
   @include tablets {
-    padding: 95px 0 160px 0;
+    padding: 97px 0 207px 0;
   }
 
   @include phones {
-    padding: 65px 0 67px 0;
+    padding: 66px 0 67px 0;
   }
 
   .container {
@@ -32,7 +32,7 @@
     width: 80%;
     justify-content: center;
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 34px;
   }
 
   @include phones {
@@ -42,10 +42,10 @@
 }
 
 .hall__info-wrapper {
-  margin-left: 62px;
+  margin: 10px 0 0 60px;
 
   @include tablets {
-    margin-left: 0;
+    margin: 0;
   }
 
   h2 {
@@ -57,6 +57,7 @@
 
     @include tablets {
       font-size: 42px;
+      letter-spacing: 0.03em;
     }
 
     @include phones {
@@ -69,8 +70,12 @@
     font-weight: 400;
     margin: 0 0 42px 0;
 
+    @include tablets {
+      margin-bottom: 40px;
+    }
+
     @include phones {
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
   }
 
@@ -172,7 +177,6 @@
   button {
     background: transparent;
     border-color: transparent;
-    // outline: none;
     cursor: pointer;
     transition: 0.2s;
 
@@ -184,13 +188,11 @@
       border-color: $dark-red;
     }
 
-    // &:focus {
-    //   outline: rgba($dark-blue, 0.8);
-    // }
-
     img {
-      width: 73px;
-      height: 73px;
+      @include tablets {
+        width: 73px;
+        height: 73px;
+      }
     }
   }
 }

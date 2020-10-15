@@ -4,29 +4,20 @@
   var START_BUTTON = 0;
 
   var buttons = document.querySelectorAll('.subscriptions__list-buttons button');
-  var prices = document.querySelectorAll('.subscriptions__price span');
-  var lessons = document.querySelector('#lessons');
+  var items = document.querySelectorAll('.subscriptions__items');
 
-  if (lessons) {
-    var lessonsValue = parseInt(lessons.textContent, 10);
+  if (!buttons || !items) {
+    return;
   }
-
 
   function cleanClassActive() {
-    buttons.forEach(function (button) {
+    buttons.forEach(function (button, i) {
       button.classList.remove('active');
-    });
-  }
-
-  function changePrices(money, amountMoths) {
-    money.forEach(function (price) {
-      var priceValue = +price.dataset.value;
-      price.textContent = priceValue * amountMoths;
+      items[i].classList.remove('active');
     });
   }
 
   buttons.forEach(function (button, i) {
-    var buttonValue = +button.dataset.value;
 
     if (i === START_BUTTON) {
       button.classList.add('active');
@@ -36,16 +27,12 @@
       cleanClassActive();
 
       button.classList.add('active');
-
-
-      lessons.textContent = (lessonsValue * buttonValue) + ' занятий';
-      changePrices(prices, buttonValue);
+      items[i].classList.add('active');
     });
   });
 })();
 
 (function () {
-
   var Numeral = {
     START: 0,
     CORRECTOR: 1,
@@ -57,6 +44,14 @@
     NEXT: 'next'
   };
 
+  var Swipe = {
+    RIGHT: 'right',
+    LEFT: 'left'
+  };
+
+
+  var jquery = window.jQuery;
+  var isMobile = new window.MobileDetect(window.navigator.userAgent).mobile();
   var sliderReviews = document.querySelector('#slider-reviews');
   var slider = document.querySelector('#slider');
 
@@ -74,14 +69,31 @@
     var currentItem = Numeral.START;
     var steps = (parseInt(getComputedStyle(item).minWidth, 10) * items.length) / Numeral.DIVIDE;
 
+    if (isMobile) {
+      jquery(sliderList).swipe({
+        swipe: function (event, direction) {
+          switch (direction) {
+            case Swipe.RIGHT:
+              sliderGo(Control.PREV);
+              break;
+            case Swipe.LEFT:
+              sliderGo(Control.NEXT);
+              break;
+          }
+        }
+      });
+    }
+
     btnLeft.addEventListener('click', function (e) {
       e.preventDefault();
       sliderGo(Control.PREV);
+
     });
 
     btnRight.addEventListener('click', function (e) {
       e.preventDefault();
       sliderGo(Control.NEXT);
+
     });
 
 
@@ -99,7 +111,7 @@
       }
 
       if (currentItem < Numeral.START) {
-        currentItem = steps - Numeral.СORRECTER;
+        currentItem = steps - Numeral.CORRECTOR;
       }
 
       translate();

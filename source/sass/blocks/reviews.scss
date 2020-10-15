@@ -7,7 +7,7 @@
   }
 
   @include phones {
-    padding-bottom: 67px;
+    padding-bottom: 71px;
   }
 
   h2 {
@@ -20,37 +20,42 @@
 
     @include tablets {
       font-size: 42px;
-      margin-bottom: 38px;
+      margin-bottom: 39px;
+      letter-spacing: 0.03em;
     }
 
     @include phones {
       font-size: 32px;
-      margin-bottom: 34px;
+      margin-bottom: 35px;
     }
   }
 }
 
 .reviews__slider {
-  max-width: 685px;
+  max-width: 674px;
   margin: 0 auto;
 
   @include tablets {
-    max-width: 685px;
+    max-width: 678px;
+  }
+
+  @include phones {
+    max-width: 90%;
   }
 
   button:first-of-type {
-    padding-right: 40px;
+    margin-right: 40px;
 
     @include phones {
-      padding-right: 21px;
+      margin-right: 21px;
     }
   }
 
   button:last-of-type {
-    padding-left: 40px;
+    margin-left: 40px;
 
     @include phones {
-      padding-left: 21px;
+      margin-left: 21px;
     }
   }
 }
@@ -65,6 +70,10 @@
     min-width: 100%;
     background: $advantages-blue;
     padding: 60px;
+
+    @include tablets {
+      padding: 60px 62px 60px 62px;
+    }
 
     @include phones {
       padding: 42px 25px 32px 25px;
@@ -110,11 +119,11 @@
   h3 {
     font-weight: bold;
     font-size: 20px;
-    margin: 0 0 10px 0;
+    margin: 0 0 12px 0;
 
     @include phones {
       text-align: left;
-      margin: 10px 0 16% 55%;
+      margin: 10px 0 16% 100px;
     }
   }
 

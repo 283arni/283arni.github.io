@@ -13,40 +13,49 @@
     font-family: $bebas;
     font-size: 49px;
     letter-spacing: 0.1rem;
-    margin: 0 0 28px 65px;
+    margin: 0 0 28px 58px;
 
     @include tablets {
       text-align: center;
       font-size: 42px;
-      margin: 0 0 17px 0;
+      margin: 0 0 18px 0;
+      letter-spacing: 0.03em;
     }
 
     @include phones {
       font-size: 32px;
-      margin-bottom: 35px;
+      margin-bottom: 33px;
     }
   }
 
   .container {
-    min-width: 1285px;
+    max-width: 1271px;
 
     @include tablets {
-      min-width: 690px;
+      max-width: 678px;
     }
 
     @include phones {
-      min-width: 100%;
+      max-width: 91%;
     }
   }
 }
 
 .trainers__slider {
   button:first-of-type {
-    padding-right: 20px;
+    margin-right: 20px;
+
+    @include phones {
+      margin-right: 15px;
+    }
   }
 
   button:last-of-type {
-    padding-left: 20px;
+    margin-left: 20px;
+
+    @include phones {
+      margin-left: 15px;
+    }
   }
 }
 
@@ -61,7 +70,7 @@
 
       @include tablets {
         min-width: 50%;
-        padding: 20px 16px;
+        padding: 20px 18px;
       }
 
       @include phones {

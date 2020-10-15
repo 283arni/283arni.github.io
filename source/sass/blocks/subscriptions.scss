@@ -2,14 +2,14 @@
   position: relative;
   background-color: $background-sub;
   text-align: center;
-  padding: 116px 0;
+  padding: 116px 0 79px 0;
 
   @include tablets {
-    padding-bottom: 65px;
+    padding: 68px 0 90px 0;
   }
 
   @include phones {
-    padding: 68px 0 37px 0;
+    padding: 66px 0 35px 0;
   }
 
   &::after {
@@ -23,7 +23,7 @@
     background: center/cover no-repeat url("../img/weight.png");
 
     @include tablets {
-      top: 1520px;
+      top: 1470px;
       background-image: url("../img/weight-tablet.png");
     }
 
@@ -41,6 +41,7 @@
     @include tablets {
       font-size: 42px;
       margin-bottom: 30px;
+      letter-spacing: 0.03em;
     }
 
     @include phones {
@@ -73,6 +74,10 @@
     justify-content: center;
   }
 
+  li {
+    box-shadow: inset 0 -2px rgba($gray, 0.2);
+  }
+
   button {
     cursor: pointer;
     background-color: transparent;
@@ -80,15 +85,19 @@
     font-family: $roboto;
     font-size: 20px;
     border: 0;
-    border-bottom: 2px solid rgba($gray, 0.2);
+    z-index: 5;
+    border-bottom: 2px solid transparent;
     padding: 0 0 15px 0;
+    margin-right: 47px;
 
     @include tablets {
       font-size: 18px;
+      margin-right: 54px;
     }
 
     @include phones {
       font-size: 16px;
+      margin-right: 45px;
     }
 
     &.active {
@@ -98,25 +107,19 @@
     }
   }
 
-  li:nth-child(even) button {
-    padding-right: 45px;
-    padding-left: 45px;
-
-    @include tablets {
-      padding-right: 54px;
-      padding-left: 54px;
-    }
-
-    @include phones {
-      padding-right: 45px;
-      padding-left: 45px;
-    }
+  li:last-of-type button {
+    margin-right: 0;
   }
 }
 
 .subscriptions__items {
   position: relative;
+  display: none;
   z-index: 10;
+
+  &.active {
+    display: block;
+  }
 
   ul {
     justify-content: space-between;
@@ -136,6 +139,7 @@
     border: 7px solid $white;
     min-height: 448px;
     background: $white;
+    margin-bottom: 40px;
 
     @include tablets {
       width: 65%;
@@ -192,6 +196,10 @@
     box-shadow: inset 2px 2px 0 $font-main, inset -2px -2px 0 $font-main;
     margin-bottom: 3px;
     letter-spacing: 0.05em;
+
+    @include phones {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -231,6 +239,7 @@
 
     @include phones {
       font-size: 48px;
+      margin-right: 10px;
     }
   }
 

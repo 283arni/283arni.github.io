@@ -1,5 +1,5 @@
 .sale {
-  padding: 115px 0;
+  padding: 115px 0 118px 0;
 
   @include tablets {
     padding: 95px 0;
@@ -7,7 +7,7 @@
 
   @include phones {
     text-align: center;
-    padding: 65px 0 62px 0;
+    padding: 65px 0 60px 0;
   }
 
   h2 {
@@ -20,6 +20,7 @@
     @include tablets {
       font-size: 42px;
       margin-bottom: 38px;
+      letter-spacing: 0.03em;
     }
 
     @include phones {
@@ -47,6 +48,7 @@
   max-height: 462px;
 
   @include tablets {
+    max-height: none;
     flex-direction: column;
   }
 }
@@ -57,17 +59,20 @@
 
   @include tablets {
     width: 100%;
-    margin-bottom: 27px;
+    margin-bottom: 31px;
+    height: 462px;
   }
 
   @include phones {
     flex-direction: column;
+    height: auto;
   }
 }
 
 
 .sale__description {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
@@ -77,6 +82,7 @@
 
   @include phones {
     padding-bottom: 45px;
+    align-items: center;
   }
 
   a {
@@ -87,6 +93,8 @@
 }
 
 .sale__description-wrapper {
+  width: 100%;
+
   div:first-of-type {
     font-weight: bold;
     font-size: 28px;
@@ -123,7 +131,7 @@
 
   @include phones {
     min-width: auto;
-    width: 100%;
+    height: 299px;
   }
 
   img {
@@ -160,25 +168,35 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  min-height: 45.6%;
+  height: 45.6%;
   color: $advantages-blue;
   border: 7px solid;
   border-image: linear-gradient(148.82deg, $dark-red 0.85%, $dark-blue 100%) 7;
   padding: 22px 28px 28px 28px;
 
   @include tablets {
-    min-height: auto;
-    width: 48%;
+    height: 210px;
+    width: 47.8%;
     padding-bottom: 28px;
   }
 
   @include phones {
     width: 100%;
     align-items: center;
-    padding: 36px 30px;
+    padding: 33px 30px 40px 30px;
   }
 
   &:first-of-type {
+    p {
+      @include tablets {
+        width: 60%;
+      }
+
+      @include phones {
+        width: 75%;
+      }
+    }
+
     @include phones {
       margin-bottom: 31px;
     }
@@ -192,14 +210,13 @@
 }
 
 .sale__discount-wrapper {
-
   h3 {
     font-weight: bold;
     font-size: 26px;
     margin: 0 0 12px 0;
 
     @include tablets {
-      margin-bottom: 13px;
+      margin-bottom: 10px;
     }
   }
 
@@ -207,11 +224,12 @@
     margin: 0;
 
     @include tablets {
-      margin-bottom: 55px;
+      line-height: 140%;
     }
 
     @include phones {
-      margin-bottom: 32px;
+      width: 75%;
+      margin: 0 auto;
     }
   }
 }
