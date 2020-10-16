@@ -55,10 +55,10 @@ gulp.task("server", function () {
 
 gulp.task("library", function(){
   return gulp.src([
-    'node_modules/jquery/dist/jquery.js',
-    'node_modules/jquery-touchswipe/jquery.touchSwipe.js',
-    'node_modules/mobile-detect/mobile-detect.js',
-    'node_modules/svgxuse/svgxuse.js'
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/jquery-touchswipe/jquery.touchSwipe.min.js',
+    'node_modules/mobile-detect/mobile-detect.min.js',
+    'node_modules/svgxuse/svgxuse.min.js'
   ])
   .pipe(concat('vendor.js'))
   .pipe(gulp.dest('build/js'));
